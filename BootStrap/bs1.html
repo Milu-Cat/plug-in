@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>Document</title>
+    <style>
+        .container{
+                /* background: #ccc; */
+                height:200px;
+                /* width:100%; */
+        }
+        .col-md-1,.col-md-4,.col-md-3,.col-md-12,.col-md-9{
+               border:1px solid #000;
+               text-align: center;
+               height:50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- bootstrap里面的类名都有固定的 -->
+    <!-- 响应式 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">12</div>
+        </div>
+        <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">3</div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">3</div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">3</div>
+        </div>
+        <div class="row">
+                <!-- col-md-offset-3向右移动三个栈格 -->
+                <div class="col-md-3 col-md-offset-3">3</div>
+                <div class="col-md-3">3</div>
+                <div class="col-md-3">3</div>
+        </div>
+        <!-- push和pull拉推来排序 -->
+        <div  class="row">
+           <div class="col-md-3 col-md-push-9">fasr</div>
+           <div class="col-md-9 col-md-pull-3">daadd</div>
+        </div>
+        <!-- 嵌套 -->
+        <div class="row">
+            <div class="col-md-12">
+                csd
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

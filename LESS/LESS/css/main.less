@@ -1,0 +1,34 @@
+@width: 500px;
+@height: 300px;
+@color: red;
+@colory: yellow;
+@margin:margin;
+@padding:padding;
+@img:"../img/";
+@background:{background: pink;};
+.aa{
+     width:@width;
+     height:@height;
+     background:@color;
+}
+*{
+       @{margin}:0;
+       @{padding}:padding;
+
+}
+.bb{
+         width:@width;
+        height:@height;
+        background: url("@{img}10.jpg");
+}
+.cc{
+         width:@width;
+        height:@height;
+        @background();
+        p{
+           width:@width;
+           height:@height;
+           background: @colory;      
+        }
+}
+

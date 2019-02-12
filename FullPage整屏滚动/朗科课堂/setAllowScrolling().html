@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>myFullPageProject</title>
+		<link rel="stylesheet" type="text/css" href="js/jquery.fullpage.min.css"/>
+		<style type="text/css">
+			.section { text-align: center; font: 50px "Microsoft Yahei"; color: #000;}/*默认垂直居中*/
+			.section1{background: #1bbc9b;}
+			.section2{background: #4BBFC3;}
+			.section3{background: #7BAABE;}
+			.section4{background: #f90;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+		<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	</head>
+	<body>
+		<div id="fullpage">
+		    <div class="section section1 active">第一屏</div>
+		    <div class="section section2">第二屏</div>
+		    <div class="section section3">
+		    	<div class="slide">第三屏的第一屏</div>
+		        <div class="slide">第三屏的第二屏</div>
+		        <div class="slide">第三屏的第三屏</div>
+		        <div class="slide">第三屏的第四屏</div>
+		    </div>
+		    <div class="section section4">这是最后一屏</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				continuousVertical:true
+			});
+			$.fn.fullpage.setAllowScrolling(false,'left,right'); //禁止鼠标左右切换
+		})
+	</script>
+</html>

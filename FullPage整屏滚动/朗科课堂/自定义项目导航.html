@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>myFullPageProject</title>
+		<link rel="stylesheet" type="text/css" href="js/jquery.fullpage.min.css"/>
+		<style type="text/css">
+			.section { text-align: center; font: 50px "Microsoft Yahei"; color: #000;}/*默认垂直居中*/
+			.section1{background: #1bbc9b;}
+			.section2{background: #4BBFC3;}
+			.section3{background: #7BAABE;}
+			.section4{background: #f90;}
+			#menu { margin: 0; padding: 0; position: fixed; right: 20px; top: 300px; list-style-type: none; z-index: 70;}
+            #menu li { font-size: 14px;margin-bottom:10px;width:20px;height:20px;border-radius:50%;}
+            #menu a {display: block;width:20px;height:20px;background-color: #fff; color: #333; text-decoration: none;border-radius:50%;}
+            #menu .active a { color: #fff; background-color: #f00;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+		<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	</head>
+	<body>
+		<ul id="menu">
+			<li data-menuanchor="page1"><a href="#page1"></a></li>
+			<li data-menuanchor="page2"><a href="#page2"></a></li>
+			<li data-menuanchor="page3"><a href="#page3"></a></li>
+			<li data-menuanchor="page4"><a href="#page4"></a></li>
+		</ul>
+		<div id="fullpage">
+		    <div class="section section1">第一屏</div>
+		    <div class="section section2">第二屏</div>
+		    <div class="section section3">
+		    	<div class="slide">第三屏的第一屏</div>
+		        <div class="slide">第三屏的第二屏</div>
+		        <div class="slide">第三屏的第三屏</div>
+		        <div class="slide">第三屏的第四屏</div>
+		    </div>
+		    <div class="section section4">这是最后一屏</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["page1","page2","page3","page4"],
+				menu:"#menu",
+				slidesNavigation:true,
+				controlArrowColor:"#000"
+			});
+		})
+	</script>
+</html>

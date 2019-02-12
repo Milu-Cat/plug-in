@@ -1,0 +1,629 @@
+[{
+    "tit": "手机 电话卡",
+    "children": [
+        [{
+            "img": "../img/ky_mix3-80.png",
+            "con": "小米MIX 3"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米8 青春版"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米8 屏幕指纹版"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米8"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米8 SE"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米MIX 2S"
+        }],
+        [{
+            "img": "../img/ky_mix3-80.png",
+            "con": "小米Max 3"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米6X"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "黑纱游戏手机 Helo"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "黑鲨游戏手机"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米MIX 2"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米Max 2"
+        }],
+        [{
+            "img": "../img/ky_mix3-80.png",
+            "con": "红米6 Pro"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "红米6"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "红米6A"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "红米Note 5"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "红米S2"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "移动4G+专区"
+        }],
+        [{
+            "img": "../img/ky_mix3-80.png",
+            "con": "对比手机"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "米粉卡 日租卡"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "小米移动 电话卡"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "手机上门维修"
+        }, {
+            "img": "../img/ky_loading.gif",
+            "con": "云服务空间月卡"
+        }]
+    ]
+}, {
+    "tit": "电视 盒子",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "米家激光投影电视"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 32英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 40英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 33英寸青春版"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 32英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 55英寸"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 58英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 65英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4C 32英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4C 40英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4C 43英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4C 50英寸"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4X 43英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4X 55英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视 体育版"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4 55英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4 65英寸全面屏旗舰"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4 75英寸"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4S 32英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4S 50英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4S 55英寸曲面"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4S 65英寸"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米电视4A 32英寸PRO"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米盒子"
+            }
+        ]
+    ]
+}, {
+    "tit": "笔记本 平板",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "小米笔记本 15.6\""
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米笔记本 13.3\""
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米笔记本 12.5\""
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米游戏本"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米平板4"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "键盘"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "鼠标/鼠标垫"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "转接器"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "平板配件"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "笔记本双肩包"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米笔记本内胆包"
+            }
+        ]
+    ]
+}, {
+    "tit": "家电 插线板",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "米家互联网空调"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "净水器"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "净水器滤芯"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "扫地机器人"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "扫地机配件"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "空气净化器"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "电饭煲"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "电磁炉"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "厨房用具"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "电水壶"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "料理机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "滤水壶"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "落地风扇"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "投影仪"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "灯具"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "插线板"
+            }
+        ]
+    ]
+}, {
+    "tit": "出行 穿戴",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "手环手表"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "VR"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "平衡车"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "滑板车"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "自行车"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "车载逆变器"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "平衡车配件"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "智能后视镜"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "车载空气净化器"
+            }
+        ]
+    ]
+}, {
+    "tit": "智能 路由器",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "路由器"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "对讲机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "智能家庭"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "无人机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "摄像机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "照相机"
+            }
+        ]
+    ]
+}, {
+    "tit": "电源 配件",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "移动电源"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "数据线"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "车充"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "充电器"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "无线充"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "电池"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "自拍杆"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "存储卡"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "手机壳"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "手机贴膜"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "手机支架"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "平板配件"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "黑鲨配件"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "其他配件"
+            }
+        ]
+    ]
+}, {
+    "tit": "电源 配件",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "洗手机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "剃须刀"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "牙刷"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "体重秤"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "血压计"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "体温计"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "早教启蒙"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "遥控电池"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "益智积木"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "儿童手表"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "儿童滑板车"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "儿童书包"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "米兔拉杆箱"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "婴儿推车"
+            }
+        ]
+    ]
+}, {
+    "tit": "耳机 音箱",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "线控耳机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "蓝牙耳机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "头戴耳机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "品牌耳机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "蓝牙耳机"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "小米AI音箱"
+            }
+        ]
+    ]
+}, {
+    "tit": "生活 箱包",
+    "children": [
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "双肩包"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "钱包"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "口罩"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "收纳包"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "旅行箱"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "运动鞋"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "服饰"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "眼镜"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "床垫"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "枕头"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "被子"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "沙发"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "针织件套"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "首饰"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "螺丝刀"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "保温杯"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "伞"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "驱蚊器"
+            }
+        ],
+        [{
+                "img": "../img/ky_loading.gif",
+                "con": "尤克里里"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "毛巾/浴巾"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "米兔"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "签字笔"
+            },
+            {
+                "img": "../img/ky_loading.gif",
+                "con": "笔记本"
+            }
+        ]
+    ]
+}]

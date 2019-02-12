@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Swipers嵌套+抓手光标</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper.min.css">
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: #f00;
+            background: #fff;
+            height: 300px;
+            line-height: 300px;
+        }
+        .a {
+            background: #0ff;
+        }
+
+        .b {
+            background: #fcc;
+        }
+
+        .c {
+            background: #0f0;
+        }
+
+        p {
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+            margin: 0 auto;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Swipers嵌套+抓手光标</p>
+    <!-- Swiper -->
+    <div class="swiper-container s1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a">H Slide 1</div>
+            <div class="swiper-slide">
+                <div class="swiper-container s2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide c">V Slide 2A</div>
+                        <div class="swiper-slide a">V Slide 2B</div>
+                        <div class="swiper-slide b">V Slide 2C</div>
+                    </div>
+                    <div class="swiper-pagination s2-v"></div>
+                </div>
+            </div>
+            <div class="swiper-slide c">H Slide 3</div>
+        </div>
+        <div class="swiper-pagination s1-h"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper1 = new Swiper('.s1', {
+            spaceBetween:50,
+            grabCursor: true,
+            pagination: {
+                el: ".s1-h",
+                clickable: true
+            }
+        });
+        var swiper2 = new Swiper('.s2', {
+            direction:"vertical",
+            spaceBetween:50,
+            grabCursor: true,
+            pagination: {
+                el: ".s2-v",
+                clickable: true
+            }
+        });
+    </script>
+</body>
+
+</html>

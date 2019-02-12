@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="swiper.min.css">
+    <script src="swiper.animate.min.js"></script>
+    <script src="swiper.min.js"></script>
+    <style>
+        .swiper-container{
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .swiper-slide{
+            width: 600px;
+            height: 300px;
+            text-align: center;
+            line-height: 170px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .a{
+            background: #f89;
+            color: aqua;
+        }
+        .b{
+            background: #f0f;
+            color: #0f0;
+        }
+        .c{
+            background: #0f0;
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a"><p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">slide1</p></div>
+            <div class="swiper-slide b"><p class="ani" swiper-animate-effect="rollIn" swiper-aniamte-duratiom="0.8s" swiper-animate-delay="0.5s">slide2</p></div>
+            <div class="swiper-slide c"><p class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">slide3</p></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination:{
+            el:".swiper-pagination",
+            clickable: true
+        },
+        navigation:{
+            nextEl:".swiper-button-next",
+            prevEl:".swiper-button-prev"
+        },
+        on: {
+            init: function () {
+                swiperAnimateCache(this); //隐藏动画元素 
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function () {
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+            }
+        }
+    }) 
+</script>
+
+</html>

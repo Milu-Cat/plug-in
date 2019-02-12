@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>渐变+3D</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper.min.css">
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+
+        }
+
+        .s2,.s4 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .s3 {
+            width: 800px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: #f00;
+            background: #fff;
+            height: 300px;
+            line-height: 300px;
+        }
+
+        .s3 .swiper-slide {
+            width: 300px;
+        }
+
+        .a {
+            background: #0ff;
+        }
+
+        .b {
+            background: #fcc;
+        }
+
+        .c {
+            background: #0f0;
+        }
+
+        p {
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 30px;
+            margin: 0 auto;
+            font-weight: bold;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper 1-->
+    <p>1、渐变切换</p>
+    <div class="swiper-container s1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a">Slide 1</div>
+            <div class="swiper-slide b">Slide 2</div>
+            <div class="swiper-slide c">Slide 3</div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-black"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper 2-->
+    <p>2、3D方块切换</p>
+    <div class="swiper-container s2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a">Slide 1</div>
+            <div class="swiper-slide b">Slide 2</div>
+            <div class="swiper-slide c">Slide 3</div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-black"></div>
+    </div>
+
+    <!-- Swiper 3-->
+    <p>3、3D滚动切换</p>
+    <div class="swiper-container s3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a">Slide 1</div>
+            <div class="swiper-slide b">Slide 2</div>
+            <div class="swiper-slide c">Slide 3</div>
+            <div class="swiper-slide a">Slide 4</div>
+            <div class="swiper-slide b">Slide 5</div>
+            <div class="swiper-slide c">Slide 6</div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-black"></div>
+    </div>
+    <!-- Swiper 4-->
+    <p>3、3D翻转切换</p>
+    <div class="swiper-container s4">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a">Slide 1</div>
+            <div class="swiper-slide b">Slide 2</div>
+            <div class="swiper-slide c">Slide 3</div>
+            <div class="swiper-slide a">Slide 4</div>
+            <div class="swiper-slide b">Slide 5</div>
+            <div class="swiper-slide c">Slide 6</div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-black"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper1 = new Swiper('.s1', {
+            loop: true,
+            effect: 'fade',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+        var swiper1 = new Swiper('.s2', {
+            loop: true,
+            effect: 'cube',
+            // direction:"vertical",
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+        var swiper3 = new Swiper('.s3', {
+            // loop: true,
+            effect: 'coverflow',
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+        var swiper4 = new Swiper('.s4', {
+            effect: 'flip',
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

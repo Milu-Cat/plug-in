@@ -1,0 +1,9 @@
+{
+  "name": "d3-stacked-to-grouped-bars",
+  "main": "d3-stacked-to-grouped-bars.js",
+  "version": "212.0.0",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://beta.observablehq.com/@mbostock"
+  }
+}

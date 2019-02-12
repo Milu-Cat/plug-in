@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>测试</title>
+		<link rel="stylesheet" type="text/css" href="js/jquery.fullpage.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+		<style type="text/css">
+			.section{text-align:center;}
+			.s1{background:#1BBC9B}
+			.s2{background: #7BAABE;}
+			.s3{background:#FF0000;}
+			#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+            #menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+            #menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+            #menu .active a { color: #fff; background-color: #333;}
+		</style>
+	</head>
+	<body>
+		<ul id="menu">
+			<li data-menuanchor="s1"><a href="#s1">第一屏</a></li>
+			<li data-menuanchor="s2"><a href="#s2">第二屏</a></li>
+			<li data-menuanchor="s3"><a href="#s3">第三屏</a></li>
+		</ul>
+		<div id="fullpage">
+			<div class="section s1">
+				<h1>第一屏</h1>
+			</div>
+			<div class="section s2">
+				<div class="slide">第二屏第一张</div>
+				<div class="slide">第二屏第二张</div>
+				<div class="slide">第二屏第三张</div>
+			</div>
+			<div class="section s3">
+				<h1>第三屏</h1>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#fullpage").fullpage({
+				anchors:["s1","s2","s3"],
+				scrollingSpeed:1000,
+				loopBottom:true,
+				loopTop:true,
+				loopHorizontal:true,
+				paddingTop:200,
+				keyboardScrolling:false
+			});
+		})
+	</script>
+</html>

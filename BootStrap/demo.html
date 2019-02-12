@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 这是不让手机端缩放的 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <!-- 通过快捷方式打开全屏显示 --><meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 隐藏状态栏 --><meta name="apple-mobile-web-app-ststus-bar-style" content="black"/>	
+    <!-- 苹果会看起来像电话号码的数字添加电话连接 现在关闭它--><meta name="format-detection" content="telephone=no"/>	
+
+    <!-- <link rel="icon" type="image/png" href="../img/apple-touch-icon.png" sizes="32x32"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/media.css"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- 上边这个是网络文件cdn -->
+    <!-- <link rel="stylesheet" href="../css/mea.css"> -->
+    <link rel="stylesheet" href="yl.css">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/yl.js"></script>
+    <title>觅未创意 － MARK IT</title>
+</head>
+<body>
+<!-- 先干啥  做导航 怎么做 看api找到导航
+Bootstrap 中的导航组件都依赖同一个 .nav 类，状态类也是共用的。改变修饰类可以改变样式 
+处理自己 的样式  加权 保护自己的idclass不能再链接文件改这是共有的-->
+<header>
+    <nav class="navbar navbar-default navbar-static-top" id="yl3"><!-- 这是头部 按照h5标记走  -->
+      <div class="container" id="container"><!-- 这是设置屏幕也就是ui图内容大小1200 100% -->
+          
+        <div class="navbar-header">
+
+        <!-- 下边这个button是用来 当屏幕缩小 然后右上角显示一个小按钮当菜单用的 -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="javascript:;">
+            <img class="yl1" src="img/logo1.png">
+            觅未创意
+          </a>
+        </div>
+        <!-- 下边这个div是到手机屏幕然后换样式的 -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#services" class="scrollto">服务介绍</a></li>
+            <li><a href="#portfolio" class="scrollto">最新案例</a></li>
+            <li><a href="#about" class="scrollto">关于我们</a></li>
+            <li><a href="#wechat" class="scrollto">联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- 制作自适应屏幕让图片随着屏幕大小变化 -->  
+    <section id="cover">
+            <div class="container">
+              <div class="card">
+
+                  <p id="p">CRE<br>ATIV<br>ITY.</p>
+
+                <a href="#services" class="scrollto"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+              </div>
+            </div>
+    </section>
+<!-- 自定义图标 加入山歌模式 -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xm-12 yl5">服务介绍</div>
+        </div>
+      </div>
+    </section>
+      
+</body>
+</html>

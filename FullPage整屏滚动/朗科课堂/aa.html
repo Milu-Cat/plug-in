@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="js/jquery.fullpage.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+</head>
+<body>
+  <div id="fullpage">
+     <div class="section" style="background:#f00">1</div> 
+     <div class="section" style="background:#f0f">2</div> 
+     <div class="section">3</div> 
+  </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("#fullpage").fullpage();
+    })
+  </script>
+</html>

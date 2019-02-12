@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="d3.js"></script>
+    <style>
+        #chart div {
+  display: inline-block;
+  background: #4285F4;
+  width: 20px;
+  margin-right: 3px;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function ss(){
+        d3.select('#chart')
+  .selectAll("div")
+  .data([4, 8, 15, 16, 23, 42])
+  .enter()
+  .append("div")
+  .style("height", (d)=> d + "px")
+    }
+ss();
+
+</script>
+</html>
