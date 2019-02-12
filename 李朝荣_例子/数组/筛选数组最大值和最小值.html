@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>sort排序法</title>
+    <meta charset="utf-8">
+</head>
+<body>
+</body>
+    <script>
+        var x=[3,5,1,8,9,2];
+        var min=x[0];
+        var max=x[0];
+        for(var i=1;i<x.length;i++){
+            if(min>x[i]){
+                min=x[i];
+            }
+            if(max<x[i]){
+                max=x[i];
+            }
+        }
+        document.write(min+","+max);
+    </script>
+</html>

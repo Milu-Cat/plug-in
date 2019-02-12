@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>sort排序法</title>
+    <meta charset="utf-8">
+</head>
+<body>
+     <input type="button" value="上衣" onclick="ss('上衣')"> 
+     <input type="button" value="裤子" onclick="ss('裤子')">   
+     <input type="button" value="购物车" onclick="shows()"> 
+</body>
+    <script>
+        var x=[];
+        var y=[];
+       function ss(gg){
+          var b=x.indexOf(gg);
+           if(b==-1){
+               x.push(gg);
+               y.push(1);
+           }else{
+               y[b]+=1;
+           }
+       }
+       function shows(){
+           for(var i=0;i<x.length;i++){
+               alert(x[i]+":"+y[i])
+           }
+       }
+    </script>
+</html>

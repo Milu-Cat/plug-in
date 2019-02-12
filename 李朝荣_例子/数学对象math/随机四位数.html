@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>随机四位数</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <button id="stop">停止</button>
+    <div id="one"></div>
+</body>
+    <script>
+        function ss(){
+            var y="";
+            for(var i=0;i<4;i++){
+                 var x=parseFloat(Math.floor(Math.random()*9)); 
+                 y+=x;
+            }
+           document.getElementById("one").innerHTML=y;
+        }
+        i=setInterval("ss()",10);
+        document.getElementById("stop").onclick=function(){
+            clearInterval(i);
+        }
+    </script>
+</html>

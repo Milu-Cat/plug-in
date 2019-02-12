@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>购物车_原生js</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #goods {
+      width: 900px;
+      margin: auto;
+    }
+
+    .gs {
+      width: 200px;
+      border: 3px solid #f00;
+      overflow: hidden;
+      padding-bottom: 20px;
+      float: left;
+      margin-left: 15px;
+    }
+
+    .gs img {
+      width: 100%;
+      height: 100px;
+    }
+
+    .gs .info {
+      float: left;
+      margin-top: 10px;
+    }
+
+    .gs button {
+      float: right;
+      margin-top: 10px;
+    }
+
+    #car {
+      clear: left;
+    }
+
+    .gs .info {
+      width: 100px;
+    }
+
+    #car {
+      float: left;
+      width: 400px;
+      border: 1px solid #ccc;
+      
+      margin-left: 530px;
+    }
+
+    #car .cc {
+      background: #eee;
+      margin-bottom: 10px;
+    }
+
+    h1,.ze{
+      margin-top: 50px;
+      width: 100px;
+      clear: left;
+      margin-left: 530px;
+    }
+  </style>
+</head>
+<body>
+  <div id="goods">
+    <div class="gs">
+      <img src="1.jpg">
+      <div class="info">
+        <p class="name" data-flag="01">风衣</p>
+        <p class="price">1999</p>
+      </div>
+      <button class="tj">添加到购物车</button>
+    </div>
+    <div class="gs">
+      <img src="1.jpg">
+      <div class="info">
+        <p class="name" data-flag="02">大衣</p>
+        <p class="price">2999</p>
+      </div>
+      <button class="tj">添加到购物车</button>
+    </div>
+    <div class="gs">
+      <img src="1.jpg">
+      <div class="info">
+        <p class="name" data-flag="03">毛衣</p>
+        <p class="price">3999</p>
+      </div>
+      <button class="tj">添加到购物车</button>
+    </div>
+    <div class="gs">
+      <img src="1.jpg">
+      <div class="info">
+        <p class="name" data-flag="04">套装</p>
+        <p class="price">4999</p>
+      </div>
+      <button class="tj">添加到购物车</button>
+    </div>
+  </div>
+  <h1>购物车</h1>
+  <p class="ze">总额：<span id="ze">--</span></p>
+  <div id="car"></div>
+</body>
+    <script>
+        var tj=document.getElementsByClassName("tj");
+        for(var i=0;i<tj.length;i++){
+            tj[i].onclick=function(){
+              if(document.getElementById("car").innerHTML!==""){
+                   var car=document.getElementById("car").children;
+                   var b=0;
+                   for(var i=0;i<car.length;i++){
+                     if(this.previousElementSibling.children[0].getAttribute("data-flag")==car[i].getAttribute("data-flag")){
+                        var val=parseInt(car[i].children[2].value);
+                        car[i].children[2].value=val+1;    //改正前错误写法:val+=1;val是新定义的变量，加1并不能给value加1
+                        b=1;
+                        break;
+                     }
+                   }
+                   if(b==0){
+                    add(this);
+                   }
+              }else{
+                  add(this);
+              }
+              function add(obj){
+                  var name_=obj.previousElementSibling.children[0].innerHTML;
+                  var price_=obj.previousElementSibling.children[1].innerHTML;
+                  var df=obj.previousElementSibling.children[0].getAttribute("data-flag");
+                  var car_div=document.createElement("div");
+                  car_div.setAttribute("data-flag",df);
+                  var name=document.createElement("span");
+                  name.innerHTML=name_;
+                  car_div.appendChild(name);
+                  var butjian=document.createElement("button");
+                  butjian.className="jian"
+                  butjian.innerHTML="-";
+                  car_div.appendChild(butjian);
+                  var ipt=document.createElement("input");
+                  ipt.value="1"
+                  ipt.type="text"
+                  car_div.appendChild(ipt);
+                  var butjia=document.createElement("button");
+                  butjia.className="jia"
+                  butjia.innerHTML="+";
+                  car_div.appendChild(butjia);
+                  var rmb=document.createElement("span");
+                  rmb.innerHTML="￥";
+                  car_div.appendChild(rmb);
+                  var price=document.createElement("span");
+                  price.innerHTML=price_;
+                  car_div.appendChild(price);
+                  var del=document.createElement("button");
+                  del.className="del"
+                  del.innerHTML="删除";
+                  car_div.appendChild(del);
+                  document.getElementById("car").appendChild(car_div);
+              }
+
+            }     
+        }
+      
+        document.getElementById("car").addEventListener("click",ss,false);
+        function ss(e){
+          //  减
+             if(e.target.className=="jian"){
+               if(e.target.nextElementSibling.value>1){
+                   e.target.nextElementSibling.value-=1;
+               }           
+             }
+             //加
+             if(e.target.className=="jia"){
+                   var aa=parseInt(e.target.previousElementSibling.value);  
+                   e.target.previousElementSibling.value=aa+1;
+             }
+             //删除
+             if(e.target.className=="del"){
+                   e.target.parentNode.remove();
+                   
+             }
+        }
+
+    </script>  
+</html>

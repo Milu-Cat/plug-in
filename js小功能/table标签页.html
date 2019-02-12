@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>点击菜单显示相关内容</title>
+<style type="text/css">
+	.selected{
+        float: left;width: 198px;text-align: center;background-color: #3A5FCD;cursor: pointer;border: 1px solid white;
+    }
+	.unselect{
+        float: left;width: 198px;text-align: center;background-color: #6495ED;cursor: pointer;border: 1px solid white;
+        }
+</style>
+<script type="text/javascript">
+	function showInfo(objId){	
+		if(objId=="junior"){
+			document.getElementById("pri").className ="unselect";
+			document.getElementById("jun").className ="selected";
+			document.getElementById("sen").className ="unselect";
+			document.getElementById("uni").className ="unselect";
+			document.getElementById("primary").style.display="none";
+			document.getElementById("junior").style.display="block";
+			document.getElementById("senior").style.display="none";
+			document.getElementById("university").style.display="none";
+		}else if(objId=="senior"){
+			document.getElementById("pri").className ="unselect";
+			document.getElementById("jun").className ="unselect";
+			document.getElementById("sen").className ="selected";
+			document.getElementById("uni").className ="unselect";
+			document.getElementById("primary").style.display="none";
+			document.getElementById("junior").style.display="none";
+			document.getElementById("senior").style.display="block";
+			document.getElementById("university").style.display="none";
+		}else if(objId=="university"){
+			document.getElementById("pri").className ="unselect";
+			document.getElementById("jun").className ="unselect";
+			document.getElementById("sen").className ="unselect";
+			document.getElementById("uni").className ="selected";
+			document.getElementById("primary").style.display="none";
+			document.getElementById("junior").style.display="none";
+			document.getElementById("senior").style.display="none";
+			document.getElementById("university").style.display="block";
+		}else{
+			document.getElementById("pri").className ="selected";
+			document.getElementById("jun").className ="unselect";
+			document.getElementById("sen").className ="unselect";
+			document.getElementById("uni").className ="unselect";
+			document.getElementById("primary").style.display="block";
+			document.getElementById("junior").style.display="none";
+			document.getElementById("senior").style.display="none";
+			document.getElementById("university").style.display="none";
+		}
+	}
+</script>
+</head>
+<body>
+	<div style="position: absolute;top: 50px;left: 100px;width: 800px;">
+		<div id="title" style="width: 800px;font-size: 26px;height: 40px;line-height: 38px;">
+			<div id="pri" class="selected" onclick="showInfo('primary')">小学</div>
+			<div id="jun" class="unselect" onclick="showInfo('junior')">初中</div>
+			<div id="sen" class="unselect" onclick="showInfo('senior')">高中</div>
+			<div id="uni" class="unselect" onclick="showInfo('university')">大学</div>
+		</div>
+		<div id="content" style="width: 800px;background-color: #D1EEEE;padding-top: 10px;">
+			<div id="primary" style="display: block;">
+				小学（Primary school），是人们接受初等正规教育的学校，是基础教育的重要组成部分。
+				随着社会发展，在其前又开设了幼儿园。一般6－12岁为小学适龄儿童，现阶段小学阶段教育的年限为6年，有些地方仍是5年。
+				小学教育阶段后为中学教育阶段。
+			</div>
+			<div id="junior" style="display: none;">
+				初中（Junior high school），是初级中学的简称。初中是中学阶段的初级阶段，初级中学一般是指九年义务教育的中学，是向高级中学过渡的一个阶段，属于中等教育的范畴。
+			</div>
+			<div id="senior" style="display: none;">
+				高中（Senior high school），是高级中学的简称，我国中学分为初级中学与高级中学，其中高中属于高级中等教育的范畴。高级中学是我国九年义务教育结束后更高等的教育机构，上承初中，下启大学，一般为三年制。中国的高中教育指初中以后的高级中等教育，包括：普通高中、成人高中、职业高中、中等专业学校、中级技工学校等，均属于高级中等教育的范畴。
+			</div>
+			<div id="university" style="display: none;">
+				大学（University），学名为普通高等学校，是一种功能独特的文化机构，
+				是与社会的经济和政治机构既相互关联又鼎足而立的传承、研究、融合和创新高深学术的高等学府。
+				它不仅是人类文化发展到一定阶段的产物，它还在长期办学实践的基础上，
+				经过历史的积淀、自身的努力和外部环境的影响，逐步形成了一种独特的大学文化 。
+			</div>
+		</div>
+	</div>
+</body>
+</html>

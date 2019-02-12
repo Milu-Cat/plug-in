@@ -1,0 +1,52 @@
+﻿<!--程序1-1-->
+<!DOCTYPE html>
+<html>
+<head>
+   <title>我们的班级主页</title>
+
+   <style>
+       *{margin:0;padding: 0;}
+      [draggable]{
+              -webkit-user-select: none;
+              user-select: none;   
+      }
+      .box{
+              height: 150px;
+              width:150px;
+              float: left;
+              border:2px solid #666666;
+              background-color:#ccc;
+              margin-right: 5px;
+              border-radius: 10px;
+              text-align:center;
+              opacity: 1;
+      }
+      .box header{
+                color:#fff;
+                text-shadow: #000 0 1px;
+                box-shadow: 5px;
+                padding: 5px;
+                background: #999;
+                border-bottom:1px solid #ddd;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+      }
+   </style>
+</head>
+<body>
+    <div class="box" draggable="true">
+         <header>A</header>
+    </div>
+    <div class="box" draggable="true">
+        <header>B</header>
+   </div>
+   <div class="box" draggable="true">
+        <header>C</header>
+   </div>
+</body>
+<script>
+   function handleDragStart(e){
+           this.style.opacity="0.5";
+   }
+</script>
+</html>

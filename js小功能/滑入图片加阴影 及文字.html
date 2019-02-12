@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+
+img,#con{
+      width:200px;   
+	  height:300px;
+	}
+	#zc{
+		width:200px;   
+	  height:300px;
+	  background: #000;
+      opacity: 0.5;
+	  position: absolute;
+	  top:0px;
+      color: greenyellow;
+	  text-align: center;
+	  line-height: 300px;
+	}
+	/* opacity: 0.5;是设置半透明背景 */
+</style>
+</head>
+<body>
+	<div id="con">
+	   <img src="img/lcr_q.jpg" >	
+	   <div id="zc" style="display:none">你看什么看，傻子！</div>
+	</div>
+</body>
+    <script>
+		document.getElementById("con").onmouseenter=function(){
+            this.children[1].style.display="block"
+		}
+		document.getElementById("con").onmouseleave=function(){
+            this.children[1].style.display="none"
+		}
+	</script>
+</html>

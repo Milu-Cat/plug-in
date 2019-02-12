@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>水平导航条二级菜单</title>
+    <meta charset="utf-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .nav_con{
+                float: left;
+                border-left:1px solid #fff;
+        }
+        .nav_con h3{
+            width:200px;
+            height:40px;
+            background: #ccc;
+            text-align: center;
+            line-height: 40px;
+        }
+        #nav,.nav_con ul{
+                list-style-type: none;
+        }
+        .nav_con ul{
+              width:200px;
+             
+              text-align: center;
+        }
+        .nav_con ul li{
+            border-top:1px solid #fff;
+           background: #ccc;  
+        }
+        .nav_con ul li a{
+                 color:#fff;
+                text-decoration: none;
+        }
+        .hide{
+              display: none;
+        }
+        .show{
+               display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li class="nav_con">
+            <h3 >商品名称</h3>
+            <ul class="hide" class="ee">
+                <li><a href="https://www.taobao.com/"> 商品1</a></li>
+                <li><a href="#"> 商品2</a></li>
+                <li><a href="#"> 商品3</a></li>
+            </ul>
+        </li>
+        <li class="nav_con">
+                <h3>商品名称</h3>
+                <ul class="hide" clsss="ee">
+                    <li><a href="#"> 商品1</a></li>
+                    <li><a href="#"> 商品2</a></li>
+                    <li><a href="#"> 商品3</a></li>
+                </ul>
+            </li>
+            <li class="nav_con">
+                    <h3>商品名称</h3>
+                    <ul class="hide" class="ee">
+                        <li><a href="#"> 商品1</a></li>
+                        <li><a href="#"> 商品2</a></li>
+                        <li><a href="#"> 商品3</a></li>
+                    </ul>
+                </li>
+    </ul>
+</body>
+    <script>
+     var ll=document.getElementById("nav").children;
+     for(var i=0;i<ll.length;i++){
+         ll[i].onmouseenter=function(){  
+             this.children[0].style.background="red"
+               this.children[1].className="show";
+         }
+         ll[i].onmouseleave=function(){
+               this.children[1].className="hide";
+               this.children[0].style.background="#ccc"
+         }     
+ 
+        var lll=(ll[i].children[1]).children;
+        for(var j=0;j<lll.length;j++){
+               lll[j].onmouseenter=function(){
+                   this.style.background="pink"
+               }
+               lll[j].onmouseleave=function(){
+                   this.style.background="#ccc"
+               }
+        }
+        }
+
+//原型写法
+        // function ss(id,id1){
+        //       this.ll=document.getElementById(id).children;
+        // }
+        // ss.prototype.yx=function(){
+        //     for(var i=0;i<this.ll.length;i++){
+        //  this.ll[i].onmouseenter=function(){  
+        //      this.children[0].style.background="red"
+        //        this.children[1].className="show";
+        //  }
+        //  this.ll[i].onmouseleave=function(){
+        //        this.children[1].className="hide";
+        //        this.children[0].style.background="#ccc"
+        //  }   
+        // for(var j=0;j<this.ll[i].children[1].children.length;j++){
+        //     this.ll[i].children[1].children[j].onmouseenter=function(){
+        //            this.style.background="pink"
+        //        }
+        //        this.ll[i].children[1].children[j].onmouseleave=function(){
+        //            this.style.background="#ccc"
+        //        }
+        //  }
+        // }
+        // }
+        // var s=new ss("nav","ee");
+        // s.yx();
+
+    </script>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #banner{
+           width:600px;
+           height:300px;
+           position: relative;
+       }
+       #show{
+           width:600px;
+           height:300px;
+           overflow: hidden;
+       }
+       #content{
+           width:2400px;
+           height:300px;
+       }
+       #content img{
+           float:left;
+           width:600px;
+           height:300px;
+       }
+       #jd{
+           position: absolute;
+           z-index: 999;
+           margin:0;
+           padding:0;
+           list-style-type: none;
+           bottom:20px;
+           left:200px;
+       }
+       #jd li{
+           float:left;
+           width:20px;
+           height:20px;
+           background:#fff;
+           margin-left:20px;
+           border-radius: 50%;
+       }
+       #jd .bg{
+           background:#000;
+       }
+    </style>
+</head>
+<body>
+    <div id="banner">
+       <div id="show">
+           <div id="content">
+               <img src="img/1.jpg" data-index="0">
+               <img src="img/2.jpg" data-index="1">
+               <img src="img/3.jpg" data-index="2">
+               <img src="img/4.jpg" data-index="3">
+           </div>
+       </div>
+       <ul id="jd">
+           <li class="bg"></li>
+           <li></li>
+           <li></li>
+           <li></li>
+       </ul>
+    </div>
+</body>
+<script>
+   var b=0;
+   var f;
+   var ss;
+   //图片轮播效果
+   function lbt(){
+       document.getElementById("show").scrollLeft+=20; //每次移动20px
+       if(document.getElementById("show").scrollLeft>=600){  //判断是否走完一张图片          
+           var con=document.getElementById("content");
+           con.appendChild(con.children[0]);//一定第一张图片到末尾
+           document.getElementById("show").scrollLeft=0; //把滚动条归零
+           clearInterval(f); //清除计时器，图片停止滚动
+           ss=setTimeout("lbstart()",1000)//延迟1秒钟继续滚动
+       }
+   }
+   function lbstart(){
+    //处理焦点颜色
+    var jd=document.getElementById("jd").children;
+    //将当前焦点变为黑色，上一个清除颜色
+    if(b>=3){  //处理最后一个焦点和第一个焦点的切换
+        jd[b].className="";
+        b=0; 
+        jd[b].className="bg"; 
+    }else{
+      b++; 
+      jd[b-1].className="";
+      jd[b].className="bg";
+    }     
+    f=setInterval("lbt()",50); 
+   }
+   ss=setTimeout("lbstart()",1000)
+
+  var cc=document.getElementById("jd").children;
+  //设置点击焦点切换图片
+  for(var i=0;i<cc.length;i++){
+      cc[i].index=i; //给每个焦点上添加属性绑定标识
+      cc[i].onmouseenter=function(){
+        clearInterval(f);
+        clearTimeout(ss);
+        //切换焦点颜色
+        cc[b].className="";
+        this.className='bg';
+        b=this.index; //将焦点标识符修改为当前焦点的位置
+ 
+        var ind=this.index;
+        var im=document.getElementById("content");
+        for(var j=0;j<4;j++){
+            //找到点击的焦点对应的图片位置
+            if(ind==im.children[j].getAttribute("data-index")){
+                for(var x=0;x<j;x++){
+                    im.appendChild(im.children[0]); //将对应的图片前面的图片移动到末尾
+                }
+                //如果当前对应的图片前面没有图片并且已经移动了位置，就将其位置归零
+                var sl=document.getElementById("show").scrollLeft;
+                if(sl>0 && sl<600){
+                    document.getElementById("show").scrollLeft=0;
+                }
+                break;
+            }
+        }
+        // ss=setTimeout("lbstart()",1000);
+      }
+  }
+  document.getElementById("jd").onmouseleave=function(){
+        ss=setTimeout("lbstart()",1000);
+  }
+</script>
+</html>

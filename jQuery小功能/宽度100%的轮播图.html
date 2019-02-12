@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{margin:0;padding: 0;}
+         .con{
+			   width:100%;
+			   height:500px;
+			   background: #ccc; 
+			   position: relative;  
+			   overflow: hidden;
+		 }
+		 .one{
+			  width:200%;
+			  left:0%;
+               position: absolute;
+	
+		 }
+		 .one img{
+			     width:50%;
+				 float: left;
+		 }
+		 .let{
+			     position: absolute;
+				 top:40%;
+				  color:#fff;
+				  font-size: 60px;	
+				  left:1%;  
+				  cursor: pointer;
+		 }
+		 .rig{
+			     position: absolute;
+				 top:40%;
+				  color:#fff;
+				  font-size:60px;	 
+				  left:98% ;
+				  cursor: pointer;
+				  
+		 }
+		 #jb{
+			  position: absolute;
+			     top:90%;
+				 left:70%;
+		 }
+		 .kzl ,.kzr,.bg{
+			     width:50px;
+				 height:5px;
+				 background: #fff;
+				 margin-left:10px;
+				 float: left;
+				
+		 }
+		 .bg{
+			   background: orange;
+		 }
+		</style>
+		<script src="jquery.js"></script>
+	<script> 
+		$(function(){
+        var n=0; 
+		function ss(){
+                if(n<1){
+                     $(".one").animate({"left":"-100%"},300);
+                     n++;
+                }else{
+                    $(".one").animate({"left":"0px"},300);
+                    n=0;
+                }
+                if(n==2){
+                    $("#jb").children().eq(0).addClass("bg")
+                    $("#jb").children().eq(1).removeClass("bg")
+                }
+                $("#jb").children().eq(n).addClass("bg").siblings().removeClass("bg")
+            }
+          var time= setInterval(ss,2500);
+       $(".one").mouseenter(function(){
+            clearInterval(time);
+       }).mouseleave(function(){
+           time= setInterval(ss,1000);
+       })
+       $(".let").click(function(){
+            clearInterval(time);
+			if(n==0){
+				n=1;
+				$(".one").animate({"left":"-100%"},300)
+			}
+       })
+       $(".rig").click(function(){
+            clearInterval(time);
+			if(n==1){
+                n=0;
+				$(".one").animate({"left":"0"},300);
+			}
+       })   
+  })
+	</script>
+</head>
+	<body>
+		<div class="con">
+			<div class="one">
+				<img src="img/10.jpg">
+				<img src="img/11.jpg">
+			</div>
+			<p class="let">‹</p>
+			<p class="rig">›</p>
+			<div id="jb">
+		    	<p class="kzl bg"></p>
+		     	<p class="kzr"></p>
+			</div>
+
+		</div>
+	</body>
+</html>

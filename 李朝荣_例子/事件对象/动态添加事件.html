@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>动态添加事件</title>
+    <meta charset="utf-8">
+    <style>
+        ul{
+            width:199px;
+            height:199px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <ul id="one"></ul>
+    <button id="aa">添加</button>
+</body>
+    <script>
+        var n=1;
+        document.getElementById("aa").onclick=function(){
+            var x=document.createElement("li");
+            x.innerHTML=n;
+            n++;
+            document.getElementById("one").appendChild(x);
+        }
+        document.getElementById("one").addEventListener("click",ss,false);
+        function ss(e){
+            e=window.event || e;
+            if(e.target.nodeName=="LI"){
+                alert(e.target.innerHTML);
+            }
+        }
+    </script>
+</html>

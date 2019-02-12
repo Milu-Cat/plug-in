@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>计算器</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form id="myform">
+        <input type="text" value="0" id="num1">
+        <select id="aa" name="aa">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" value="0" id="num2">
+        <input type="button" value="=" id="bb">
+        <input type="text" value="0" id="res">
+    </form>
+</body>
+    <script>
+        
+        document.getElementById("bb").onclick=function (){
+            var num1=parseFloat(document.getElementById("num1").value);
+            var num2=parseFloat(document.getElementById("num2").value);
+            var res=document.getElementById("res");
+            var aa=document.getElementById("aa").value;
+            switch(aa){
+                case "1":res.value=num1+num2;
+                break;
+                case "2":res.value=num1-num2;
+                break;
+                case "3":res.value=num1*num2;
+                break;
+                case "4":res.value=num1/num2;
+                break;
+            }
+        }
+
+    </script>
+</html>

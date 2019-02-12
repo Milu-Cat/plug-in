@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #aa{
+              background: rgba(233, 232, 232, 0.856);
+        }
+    </style>
+</head>
+<body>
+         <canvas width="900px" height="500px" id="aa"></canvas>  
+</body>
+<script>
+    var mycan = document.getElementById("aa");
+    if (mycan.getContext) {
+        var mc = mycan.getContext("2d");
+    } else {
+        alert("您的浏览器不支持canvas")
+    }
+    mc.beginPath();
+    mc.moveTo(150,50);
+    mc.lineTo(150,400);
+    mc.lineTo(650,400);
+    mc.stroke();
+    mc.closePath();
+    mc.beginPath();
+    mc.moveTo(145,60);
+    mc.lineTo(150,50);
+    mc.lineTo(155,60);
+    mc.stroke();
+    mc.fill();
+    mc.closePath();
+    mc.beginPath();
+    mc.moveTo(640,395);
+    mc.lineTo(650,400);
+    mc.lineTo(640,405);
+    mc.stroke();
+    mc.fill();
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("0",130,405 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("50",120,355 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("100",110,305 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("150",110,255 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("200",110,205 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("250",110,155 );
+    mc.closePath();
+    mc.beginPath();
+    mc.font="20px 宋体";
+    mc.fillText("300",110,105 );
+    mc.closePath();
+    //矩形
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(190,200,30,200);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.font="18px 宋体";
+    mc.fillText("200",192,195);
+    mc.closePath();
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(260,100,30,300);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.fillText("300",262,95);
+    mc.closePath();
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(330,150,30,250);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.fillText("250",332,145);
+    mc.closePath();
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(400,300,30,100);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.fillText("100",402,295);
+    mc.closePath();
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(470,250,30,150);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.fillText("300",472,245);
+    mc.closePath();
+    mc.beginPath();
+    mc.fillStyle="green";
+    mc.rect(540,200,30,200);
+    mc.fill();
+    mc.fillStyle="#000";
+    mc.fillText("200",542,195);
+    mc.closePath();
+</script>
+</html>

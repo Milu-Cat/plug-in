@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>鼠标获取显示失去隐藏</title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com/" id="aa">百度</a>
+</body>
+    <script>
+       document.getElementById("aa").onclick=function(e){
+           e=window.event || e;
+           e.preventDefault();
+       }
+    </script>
+</html>

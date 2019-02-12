@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #banner{
+           width:600px;
+           height:300px;
+           position: relative;
+       }
+       #show{
+           width:600px;
+           height:300px;
+           overflow: hidden;
+           position: relative;
+       }
+       #content{
+           position:absolute;
+           width:3000px;
+           height:300px;
+           left:0;
+       }
+       #content img{
+           float:left;
+           width:600px;
+           height:300px;
+       }
+       #jd{
+           position: absolute;
+           z-index: 999;
+           margin:0;
+           padding:0;
+           list-style-type: none;
+           bottom:20px;
+           left:200px;
+       }
+       #jd li{
+           float:left;
+           width:20px;
+           height:20px;
+           background:#fff;
+           margin-left:20px;
+           border-radius: 50%;
+       }
+       #jd .bg{
+           background:#000;
+       }
+       #left,#right{
+             width:40px;
+             height: 40px;
+             position: absolute;
+             top:100px;
+             font-weight: bold;
+       }
+       #right{
+             left:500px;
+       }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+       var n=0;
+       $(function(){
+            function ss(){
+                if(n<4){
+                     $("#content").animate({"left":"-=600px"},1000);
+                     n++;
+                }else{
+                    $("#content").animate({"left":"0px"},1);
+                    n=0;
+                }
+                if(n==4){
+                    $("#jd").children().eq(0).addClass("bg")
+                    $("#jd").children().eq(3).removeClass()
+                }
+                $("#jd").children().eq(n).addClass("bg").siblings().removeClass()
+            }
+          var time= setInterval(ss,2000);
+       $("#banner").mouseenter(function(){
+            clearInterval(time);
+       }).mouseleave(function(){
+           time= setInterval(ss,2000);
+       })
+       $("#jd").children().click(function(){
+               clearInterval(time);
+              var df=$(this).attr("data-index");
+              $("#content").animate({"left":'-'+600*df+'px'},1);
+              $(this).parent().children().removeClass();
+              $(this).addClass("bg");
+              n=df;
+       })
+       $("#right").click(function(){
+            clearInterval(time);
+            n+=1;
+            if(n<4){
+                $("#content").stop(false,true)
+                 $("#content").animate({"left":'-'+600*n+'px'},1000)
+                 $("#jd").children().removeClass();
+                 $("#jd").children().eq(n).addClass("bg")
+            }else{
+                n=3;
+            } 
+       })
+
+        $("#left").click(function(){
+            clearInterval(time);
+            n-=1;
+            if(n>=0 && n<4){
+                $("#content").stop(false,true)
+                 $("#content").animate({"left":'-'+600*n+'px'},1000)
+                 $("#jd").children().removeClass();
+                 $("#jd").children().eq(n).addClass("bg")
+            }else{
+                n=0;
+            }
+       })
+    }) 
+    </script>
+</head>
+<body>
+    <div id="banner">
+       <div id="show">
+           <div id="content">
+               <img src="img/1.jpg" data-index="0">
+               <img src="img/2.jpg" data-index="1">
+               <img src="img/3.jpg" data-index="2">
+               <img src="img/4.jpg" data-index="3">
+               <img src="img/1.jpg" data-index="0">
+           </div>
+       </div>
+       <ul id="jd">
+           <li class="bg" data-index="0"></li>
+           <li data-index="1"></li>
+           <li data-index="2"></li>
+           <li data-index="3"></li>     
+       </ul>
+       <div class="lr">
+            <button id="right">></button>
+            <button id="left"><</button>
+       </div>
+
+    </div>
+</body>
+</html>

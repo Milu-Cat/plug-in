@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #one {
+            width: 100%;
+            height: 3000px;
+            background: #ccc;
+        }
+
+        #two {
+            width: 100px;
+            height: 300px;
+            background: pink;
+            position: absolute;
+            left: 1500px;
+            top: 150px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="插件/广告条固定.js"></script>
+    <script>
+        $(function () {
+            $("#two").guanggao()
+            // $(window).scroll(function () {
+            //     var x = parseInt($(window).scrollTop());
+                
+            //     if(x>150){
+            //         $("#two").css("top",x+'px')
+            //     }
+            // })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+</body>
+
+</html>

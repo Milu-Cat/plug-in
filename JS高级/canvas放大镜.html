@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+              width:550px;
+              height:370px;
+        }
+        #aa{
+               /* border:1px solid #000; */
+        }
+        div{
+                position:relative;
+                width:550px;
+              height:370px;
+        }
+    </style>
+</head>
+<body>
+    <div id="im">
+          <img src="img/1.jpg" id="ima">
+         <canvas width="200px" height="200px" id="aa"></canvas>  
+    </div>
+
+</body>
+<script>
+    var mycan = document.getElementById("aa");
+    if (mycan.getContext) {
+        var mc = mycan.getContext("2d");
+        mycan.style.display="none";
+        var im = document.getElementById("im");
+        var ima=document.getElementById("ima");
+        im.onmousemove = function (e) {
+            mycan.style.display="block";
+            mc.clearRect(0,0,300,300);
+            var sw = e.offsetX;
+            var sh = e.offsetY;
+            mycan.style.display="absolute";
+            mycan.style.marginLeft=sw+"px";
+            mycan.style.marginTop=-sh+"px";
+            mc.drawImage(ima, sw/2, sh/2, 30, 30, 0, 0, 200, 200);
+        }
+    } else {
+        alert("您的浏览器不支持canvas")
+    }
+
+</script>
+</html>

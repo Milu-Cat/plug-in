@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>竖直导航条二级菜单</title>
+    <meta charset="utf-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #nav{
+            width:200px;
+        }
+        .nav_con h1{
+            width:200px;
+            background: #ccc;
+            color:#fff;
+            font-size: 19px;
+            height:35px;
+            line-height: 35px;
+            text-align: center;
+            border-top:1px solid #fff;
+            cursor: pointer;
+        }
+        .hide{
+               list-style-type: none;
+               display: none;
+        }
+        .show{
+            list-style-type: none;
+               display: block;
+        }
+        .nav_con li {
+            width:200px;
+            background: #ccc;
+         
+            font-size: 15px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            border-top:1px solid #fff;
+        } 
+        .nav_con li a{
+               color:#000;
+               text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="nav_con">
+            <h1> 商品名称 </h1>
+             <ul class="hide">
+                 <li><a href="#">商品1</a></li>
+                 <li><a href="#">商品2</a></li>
+                 <li><a href="#">商品3</a></li>
+
+             </ul>  
+           
+        </div>
+        <div class="nav_con">
+                <h1> 商品名称 </h1>
+                 <ul class="hide">
+                     <li><a href="#">商品1</a></li>
+                     <li><a href="#">商品2</a></li>
+                     <li><a href="#">商品3</a></li>
+    
+                 </ul>  
+               
+        </div>
+        <div class="nav_con">
+                    <h1> 商品名称 </h1>
+                     <ul  class="hide">
+                         <li><a href="#">商品1</a></li>
+                         <li><a href="#">商品2</a></li>
+                         <li><a href="#">商品3</a></li>
+        
+                     </ul>  
+                   
+        </div>
+                
+    </div>
+</body>
+    <script>
+         var nc=document.getElementsByClassName("nav_con");
+         for(var i=0;i<nc.length;i++){
+             nc[i].children[0].onclick=function(){
+                 var n=document.getElementById("nav").children;
+                 for(var i=0;i<n.length;i++){
+                     n[i].children[0].style.background="#ccc"
+                 }
+                 this.style.background="red"; 
+                    var ncc=this.parentNode.parentNode.children;
+                    for(var i=0;i<nc.length;i++){
+                        ncc[i].children[1].className="hide"
+                        
+                    }
+                    this.nextElementSibling.className="show"; 
+             }
+              var nccc= nc[i].children[1].children;
+              for(var j=0;j<nccc.length;j++){  
+                  nccc[j].onmouseenter=function(){
+                      this.style.background="pink"
+              }
+              nccc[j].onmouseleave=function(){
+                      this.style.background="#ccc"
+              }
+             }
+         }
+    </script>
+</html>

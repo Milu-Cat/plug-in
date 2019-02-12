@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>隔行变色</title>
+    <meta charset="utf-8">
+    <style>
+        table{
+           width:500px;
+           height:500px;
+           border:1px solid #ccc;
+           border-collapse: collapse;
+        }
+       td{
+             border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table id="aa">
+        <tr>
+            <td class="f1"></td>
+            <td class="f2"></td>
+            <td class="f3"></td>
+        </tr>
+        <tr>
+                <td class="f4"></td>
+                <td class="f5"></td>
+                <td class="f6"></td>
+        </tr>
+
+            <tr>
+                    <td class="f7"></td>
+                    <td class="f8"></td>
+                    <td class="f9"></td>
+            </tr>
+        </table>
+</body>
+    <script>
+       var aa=document.getElementById("aa").children[0].children;
+       for(var j=0;j<aa.length;j++){
+           var bb=aa[j].children;
+           for(var i=0;i<aa.length;i++){
+               bb[i].onmouseover=function(){
+                   switch(this.className){
+                       case "f1":this.style.background="red";
+                       break;
+                       case "f2":this.style.background="green";
+                       break;
+                       case "f3":this.style.background="yellow";
+                       break;
+                       case "f4":this.style.background="pink";
+                       break;
+                       case "f5":this.style.background="brown";
+                       break;
+                       case "f6":this.style.background="#ccc";
+                       break;
+                       case "f7":this.style.background="red";
+                       break;
+                       case "f8":this.style.background="pink";
+                       break;
+                       case "f9":this.style.background="yellow";
+                       break;
+                   }
+                
+            }
+                bb[i].onmouseout=function(){
+                  this.style.background="";
+            }
+          }
+       }
+
+             
+
+    </script>
+</html>

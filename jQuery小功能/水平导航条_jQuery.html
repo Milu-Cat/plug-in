@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>lx</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="插件/水平导航条.js""></script>
+  <style>
+      *{margin:0;padding: 0;}
+   ul{
+          list-style-type: none;
+          display: none;
+   }
+   ul li{
+            width: 150px;
+            height:25px;
+            background: pink;
+   }
+   div{
+           float: left;
+           width: 150px;
+           height: 30px;
+           background: #ccc;
+           text-align: center;
+           line-height: 30px;
+   }
+  </style>
+      <script>
+        $(function(){
+            $(".con").shuipingdaohang()
+            //  $(".con").mouseenter(function(){
+            //     $(".con").children("ul").stop(false,false)//防止滑的太快出现错乱
+            //     $(this).css("background","pink").children("ul").slideDown()
+            //  }).mouseleave(function(){
+            //     $(this).css("background","#ccc").children("ul").css("display","none")
+            // }).find("li").mouseenter(function(){
+            //     $(this).css({"background":"#000","color":"#fff"})
+            // }).mouseleave(function(){
+            //     $(this).css({"background":"pink","color":"#000"})    
+            // })   
+        })
+      </script>
+  </head>
+<body>
+     <div class="con">
+         <h3>首页</h3>
+         <ul>
+             <li>123</li>
+             <li>123</li>
+             <li>123</li>
+         </ul>
+     </div>
+     <div class="con">
+            <h3>首页</h3>
+            <ul>
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+        </div>
+        <div class="con">
+                <h3>首页</h3>
+                <ul>
+                    <li>123</li>
+                    <li>123</li>
+                    <li>123</li>
+                </ul>
+            </div>
+</body>
+</html>

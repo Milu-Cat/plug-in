@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>鼠标获取显示失去隐藏</title>
+    <meta charset="utf-8">
+    <style>
+        .bb{
+            width:199px;
+            height:199px;
+            background: #ccc;
+            display: none;
+        }
+        .cc{
+            width:199px;
+            height:199px;
+            background: #ccc;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div id="aa">
+        鼠标获取显示失去隐藏
+         <div class="bb" id="bb"> </div> 
+    </div>
+</body>
+    <script>
+      document.getElementById("aa").onmouseover=function(){
+             document.getElementById("bb").className="cc"
+      }
+      document.getElementById("aa").onmouseout=function(){
+             document.getElementById("bb").className="bb"
+      }
+    </script>
+</html>

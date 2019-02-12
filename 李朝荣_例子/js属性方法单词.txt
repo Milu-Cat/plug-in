@@ -1,0 +1,183 @@
+数组：
+.push()                      在数组尾部添加元素
+.unshift()                   在数组头部添加元素
+delete 数组名[元素位置]      删除元素，但会保留位置
+.pop()                       从数组尾部开始删除
+.shift()                     从数组头部开始删除
+var newarr=arr1.concat(arr2,arr3)       合并数组
+.tostring()                   数组转字符串
+.slice                        截取一段数组元素返回到新数组，截取后不会影响原数组。
+.indexOf                      获取元素索引
+
+
+字符串：
+charAt(字符位置)              返回指定字符的位置
+var newstring=string1.concat(string2)        链接字符串
+slice（）                     截取字符串，位置可以取负
+substr(star length)           截取字符串
+substring(star stop)          截取字符串，位置不能取负
+split()                       将字符串分割成数组
+
+
+Math函数对象：
+Math.PI                       返回圆周率
+Math.floor（x）               对数进行下舍入（直接删除小数） 
+Math.ceil(x)                  对数进行上舍入（进一位，然后删除小数，小数必须大于0）
+Math.round(x)                 对数进行四舍五入
+Math.random()                 返回0-1间的随机数
+
+
+Date()时间对象：
+new Date()                     创建日期对象
+getDate()                      返回日期对像一个月中的某一天    
+getDay()                       返回日期对像一周中的某一天
+getMonth                       返回日期对像的月份  
+getFullYear()                  以四位数字返回日期对象的年份       
+getHours()                     返回日期对象的小时
+getMinutes()                   返回日期对象的分钟
+getSeconds()                   返回日期对象的秒数
+getMilliseconds()              返回日期对象的毫秒
+getTime()                      返回1970年1月1日凌晨至今的毫秒数
+parse（）                      返回1970年1月1日凌晨至指定日期的毫秒数                               
+把“get”改成“set”            即为设置对应时间   
+toString()                     把日期对象转换为字符串
+toTimeString()                 把日期对象的时间部分转换成字符串
+toDateString()                 把日期对象的日期部分转换成字符串
+toUTCString()                  根据世界时间，把日期对象转换成字符串
+toLocaleString()               根据本地时间格式，把日期对象转换为字符串
+toLocaleTimeString()           根据本地时间格式，把日期对象的时间部分转换为字符串
+toLoaleDateString()            根据本地时间格式，把日期对象的日期部分转换为字符串
+
+
+BOM对象 window对象：
+.innerHeight                浏览器窗口的实际高度（不包含工具栏和滚动条，IE6、7、8不支持）
+.innerWidth                 浏览器窗口的实际宽度（不包含工具栏和滚动条，IE6、7、8不支持）
+.alert                      带“确定”按钮的提示框
+.confirm                    带有“确定”和“取消”两个按钮
+.prompt                     带有输入框的弹框，输入后点击“确定”后可再弹出相应内容的弹框
+.open("url","窗口名称","属性=值")     会弹出一个指定高宽的网址窗口
+setTimeout()                     在指定的毫秒数后调用函数或计算表达式（延迟调用函数）
+clearTimeout()                   清除setTimeout()
+setInerval()                     按照指定的周期来调用函数或计表达式
+clearInterval()                  清除setInerval() 
+
+
+BOM对象 Navigator对象：
+.appCodeName                   返回浏览器的代码
+.appName                       返回浏览器的名称
+.appVersion                    返回浏览器的平台和版本信息
+.browserLanguage               返回当前浏览器的语言
+.cookieEnabled                 返回指定浏览器中是否启用cookie的布尔值
+
+
+BOM对象 Screen对象：
+.availHeight                  返回显示屏幕的高度（除了Windows任务栏以外）
+.availWidth                   返回显示屏幕的宽度(除了Windows任务栏以外)
+.height                       返回显示屏的高度
+.width                        返回显示屏的宽度
+
+
+BOM对象 History对象：
+.back()                       加载history列表中的前一个url
+.forward()                    加载history列表中的下一个url
+.go()                         加载history列表中的某个具体的页面
+
+
+BOM对象 Location对象：
+.href                         设置或返回完整的url
+.search                       设置或返回从问号（？）开始的url                     
+
+
+DOM对象 document：
+.innerHTML                       返回或设置元素里的内容，包括HTML代码
+.createElement()                 创建一个元素节点
+.appendChild(要添加或移动的节点)   添加节点到当前节点内部的后面/移动已有节点到当前节点内部的后面
+.insertBefore(要添加或移动的节点，参考节点)   添加节点/移动节点 到当前节点内部的参考节点的前面 
+.remove                         删除当前节点（IE不支持）
+.removeChild(要删除的子节点)     删除当前节点的子节点
+.cloneNode(true)                深拷贝：除了复制节点，还复制所有子节点及文本节点
+.replaceCild（新节点，被替换的节点）        创建新节点/移动原有节点，替换指定指定节点
+.hasChildNode()                            判断是否有子节点
+.contains(要判断的节点)                     判断是否含有某节点          
+.parentNode                                 更改对象为当前节点的父节点
+.firstChild                                 更改为当前对象的第一个子节点
+.lastChild                                  更改为当前对象的最后一个子节点
+.childNodes                                 更改为子节点的集合（节点间的空格也算一个节点）
+.children                                   更改为子节点集合（无视空格）
+.nextSibling                                更改为下一个兄弟节点（前面不能有空格）
+.nextElementSibling                         更改为下一个兄弟元素节点（无视空格）
+.previousSibling                            更改为上一个兄弟（前面不能有空格）
+.previousElementSibling                     更改为上一个兄弟（无视空格）
+.getAttribute("属性名")                     获取节点属性
+.setAttribute("属性名"，"值")               设置节点属性
+.removeAttribute（"属性名"）                删除节点
+
+
+事件类型：
+window.onload=function(){}               文档加载完成时触发
+window.onresize=function(){}             调整窗口大小时触发
+window.onscroll=function(){}             滚动鼠标时触发
+.onclick                                 鼠标点击事件
+.onmousedown/.onmouseup                  鼠标左键按下/抬起事件
+.onmouseover/.onmouseenter               鼠标滑入事件
+.onmouseout/.onmouseleave                鼠标滑出事件
+.onmousemove                             鼠标滑入移动放大
+.onkeydown                               键盘按下
+.onkeyup                                 键盘抬起
+.onchange                                改变事件（当表单项内容或输入框内容失去焦点时触发）
+.onfocus/.onblur                         获取到焦点事件/失去焦点
+.onreset                                 重置事件（绑定在form上，表单重置的前一刻触发）
+.onsubmint                               提交事件（绑定在form上，表单提交的前一刻触发）
+
+
+事件对象：
+Chrome支持e和window.event写法
+firebox只支持e写法不支持window.event写法
+IE9/10支持e和window.event写法
+IE6/7/8只支持window.event写法
+e.shiftKey                               按下键盘shift返回true
+e.ctrlKey                                按下键盘ctrl返回true
+e.altKey                                 按下键盘alt返回true
+e.target                                 返回触发当前事件的对象
+e.srcElement                             IE6/7/8兼容写法
+e.screenX                                鼠标指针的屏幕水平坐标
+e.screenY                                鼠标指针的屏幕垂直坐标
+e.clientX/e.clientY                      鼠标指针相对窗口的水平/垂直坐标，不包括左右侧边栏和滚动条
+   --IE6/7/8兼容写法：e.x/e.y
+   --firebox中的写法：pageX/pageY也支持e.clientX/e.clientY   
+e.offsetX                                鼠标指针相对于对象区域的水平坐标
+e.offsetY  
+                              鼠标指针相对于对象区域的垂直坐标
+
+事件对象的方法：
+preventDefault()               阻止默认动作，标准写法
+if(e.preventDafault()){e.preventDafault();}else{e.returnValue=false;}    IE兼容写法
+stopPropagation()              阻止冒泡，标准写法
+if(e.stopPropagation()){e.stopPropagation();}else{e.cancelBubble=true;}   IE兼容写法
+
+
+正则表达式：
+/^(13|14|15|16|17|18)[0-9]{9}$/                           匹配手机号
+/^\d{3,4}-\d{7,8}$/ 或 /^[0-9]{3,4}-?[0-9]{7,8}$/         匹配座机号
+/^([a-zA-Z_0-9_-])+@([a-zA-Z_0-9_-])+(\.[a-zA-Z_0-9_-]{2,3})$/ 或 ^\w+@\w+\.w{2,3}$	匹配邮箱                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

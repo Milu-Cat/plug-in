@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <style>
+        .con{
+              width:300px;
+              height: 300px;
+              position: relative;
+              overflow: hidden;
+        }
+        .con img{
+              width:300px;
+              height: 300px;
+              z-index: 0;
+        }
+        .one{
+              width:300px;
+              height: 300px;
+              position: absolute;
+              background: #000;
+              background:rgba(0,0,0,0.5);
+             left: 0;
+             top: 260px;
+             color: #fff; 
+        }
+        .one img{
+                width:150px;
+                height:150px;
+                margin-top:20px;
+                margin-left:75px;
+        }
+	</style>
+      <script src="jquery.js"></script>
+      <script src="插件/滑入图片阴影笼罩带文字.js"></script>
+	<script>
+		$(function(){
+                  $(".con").yinyingwz(300)
+            //      $(".con").hover(function(){
+            //            $(".one").stop(false,true).animate({"top":"0"},500)
+            //      },function(){
+            //            $(".one").stop().animate({"top":"260px"},500)
+            //      })
+		})
+		
+	</script>
+</head>
+<body>
+   <div class="con">
+       <img src="img/1.jpg">
+        <div class="one">
+            <p>安然公司如何俺是好的头脑发阿古斯</p>
+            <img src="img/2.jpg" >
+        </div>
+   </div>
+  
+</body>
+</html>

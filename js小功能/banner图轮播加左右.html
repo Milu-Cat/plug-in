@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+      #banner{
+        width: 716.8px;
+        height: 537.6px;
+        background-color: aquamarine;
+        margin: 100px auto;
+        position: relative;
+        font-size: 0px;    /*清除img图片间的回车符产生的间隔*/
+        overflow: hidden;
+      }
+      #banner #bannerImg{
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        white-space: nowrap;  /*使这个图片能一行显示*/
+        transition:all 1s linear;
+      }
+      #banner #bannerImg .img{
+        width: 100%;
+        height: 100%;
+      }
+      #banner #bannerButton{
+        font-size: 16px;
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+      }
+      #banner #bannerButton .Button{
+        border-radius: 9px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #7FFFD4;
+      }
+      #banner #bannerButtonAside .div1{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -32px;
+        cursor: pointer;
+      }
+      
+      #banner #bannerButtonAside .div2{
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -32px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--实现 左右按钮，1234，自动滑动，鼠标停上显示小手不动 暂停。-->
+    <section id="banner" onmouseover="changeStop()" onmouseout="changeStart()">
+      
+      <!--以下是我们的banner图-->
+      <div id="bannerImg">
+        <img class="img" src="img/1.jpg">
+        <img class="img" src="img/2.jpg">
+        <img class="img" src="img/3.jpg">
+        <img class="img" src="img/4.jpg">
+        <img class="img" src="img/5.jpg">
+        <img class="img" src="img/6.jpg">
+        <img class="img" src="img/1.jpg">  <!--第7张与第一张为同一图片，消除图片切换间断-->
+      </div>
+      
+      <!--以下是我们左下方的banner图按钮-->
+      <div id="bannerButton">
+        <button class="Button" onclick="buttonChange(0)">1</button>
+        <button class="Button" onclick="buttonChange(1)">2</button>
+        <button class="Button" onclick="buttonChange(2)">3</button>
+        <button class="Button" onclick="buttonChange(3)">4</button>
+        <button class="Button" onclick="buttonChange(4)">5</button>
+        <button class="Button" onclick="buttonChange(5)">6</button>
+      </div>
+      
+      <!--以下是我们左右两个方向按钮-->
+      <div id="bannerButtonAside">
+        <div class="div1" onclick="asideChange(1)">
+          <img src="../img/forword.png">
+        </div>
+        <div class="div2" onclick="asideChange(0)">
+          <img src="../img/back.png">
+        </div>
+      </div>
+    </section>
+  </body>
+  
+  <script type="text/javascript">
+    var bannerImg=document.getElementById("bannerImg");  /*取出img容器的节点*/
+    var Button=document.getElementsByClassName("Button");  /*取出所有的button按钮*/
+    var num=0;   /*定义全局变量num,控制banner的切换次序*/
+    var aaa=0;   /*定义一个全局变量,用来取定时器函数,并在没有鼠标事件的时候清除定时器*/
+      
+    /*通过定时器实现banner图的每3000毫秒切换一次的效果的changeStart()函数*/
+    function changeStart(){
+        aaa=setInterval(function(){
+        if (num<=6) {
+          bannerImg.style.transition="all 1s linear";
+          bannerImg.style.left=(-716.8)*(num)+"px";
+          num++;
+        }else{
+          bannerImg.style.transition="all 0s linear";    /*消除num=0时,bannerImg移动的过渡效果*/
+          num=0;
+          bannerImg.style.left=(-716.8)*(num)+"px";
+          
+        }
+
+      },3000)
+    }
+    changeStart();
+    
+    /*以下是当鼠标悬浮在banner图上时,图片停止自动切换的changeStop()函数*/
+    function changeStop(){
+      clearInterval(aaa);  
+      console.log("停止他");
+    }
+    
+    /*以下是点击按钮实现对应banner图切换的change()函数*/
+    function buttonChange(Num){
+      num=Num+1;
+      bannerImg.style.transition="all 0s linear";
+      bannerImg.style.left=(-716.8)*(Num)+"px";
+    }
+    
+    /*以下是点击左右两个按钮实现banner图切换的buttonChange()函数*/
+    function asideChange(x){  /*通过传递形参x,判断往左/往右切换banner图*/
+      if (num!=6&&x==1) {
+        num++;
+      }else if(num==6&&x==1){
+        num=0;
+      }else if(num!=0&&x==0){
+        num--;
+      }
+      else if(num==0&&x==0){
+        num=5;
+      }
+      bannerImg.style.transition="all 0s linear";
+      bannerImg.style.left=(-716.8)*(num)+"px";
+    }
+  </script>
+</html> 

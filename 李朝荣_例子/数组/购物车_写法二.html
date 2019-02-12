@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="上衣" id="a" class="aa">
+    <input type="button" value="裤子" id="b" class="aa">
+    <input type="button" value="鞋子" id="c" class="aa">
+    <button id="btn">购物车</button>
+</body>
+<script>
+   var na=[];
+   var nu=[];
+   var aa=document.getElementsByClassName("aa");
+   for(var i=0;i<aa.length;i++){
+        aa[i].onclick=function(){
+               var va=this.value;
+               if(na.indexOf(va)==-1){
+                   na.push(va);
+                   nu.push(1);
+               }else{
+                     nu[na.indexOf(va)]+=1;
+               }
+        }
+   }
+document.getElementById("btn").onclick=function(){
+       for(var j=0;j<na.length;j++){
+          alert(na[j]+":"+nu[j]);
+   }
+}
+</script>
+</html>

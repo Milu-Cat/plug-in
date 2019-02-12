@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #one{
+              width:100%;
+              height: 3000px;
+              background: #ccc;
+        }
+        #two{
+              width:100px;
+              height: 300px;
+              background: pink;
+              position: absolute;
+              left:1500px;
+              top:150px;
+        }
+	</style>
+	<!-- <script src="jquery.js"></script> -->
+</head>
+<body id="body">
+     <div id="one"></div>
+     <div id="two"></div>
+</body>
+<script>
+        window.onscroll=function(){
+        var st=window.pageYOffset || document.body.scrollTop || document.documentElement.body.scrollTop;   //分别兼容谷歌、火狐、IE
+            if(st>150){
+                document.getElementById("two").style.top=st+10+"px";
+            }   
+        }
+	</script>
+</html>

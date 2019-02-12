@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		ul{
+			display: none;
+		}
+	</style>
+	<script src="jquery.js"></script>
+	<script src="插件/菜单下拉列表.js"></script>
+    <script>
+        $(document).ready(function(){
+			$("#fa").caidan()
+            //    $("#fa").find("h1").click(function(){
+            //        $(this).next().show(500).parent().siblings().children("ul").hide(500);
+			//    })
+        })
+		
+    </script>
+</head>
+<body>
+    <div id="fa">	
+	    <div>
+		    <h1>标题</h1>
+		    <ul style="display:block">
+				<li>内容</li>
+				<li>内容</li>
+				<li>内容</li>
+		    </ul>
+		</div>
+		<div>
+				<h1>标题</h1>
+				<ul>
+					<li>内容</li>
+					<li>内容</li>
+					<li>内容</li>
+				</ul>
+			</div>
+			<div>
+					<h1>标题</h1>
+					<ul>
+						<li>内容</li>
+						<li>内容</li>
+						<li>内容</li>
+					</ul>
+				</div>
+	</div>
+</body>
+</html>

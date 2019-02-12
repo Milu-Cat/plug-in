@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <style>
+       ul{
+           list-style-type: none;
+           padding: 0.1px;
+       }
+       ul li{
+               width:150px;
+               height:30px;
+               background: #ccc;
+               float: left;
+               /* margin-right: 1px; */
+               text-align: center;
+               line-height: 30px;
+       }
+       ul .bg{
+                background: rgb(209, 58, 58);
+				color: #FFF;
+       }
+       p{
+               width:452px;
+               height: 100px;
+               background: rgb(209, 58, 58);
+               display: none;
+               margin-top:30px;
+       }
+      .show{
+               display: block;
+      }
+	</style>
+    <script src="jquery.js"></script>
+    <script src="插件/table标签页.js"></script>
+	<script>
+		$(function(){
+            $("#con").table()
+			// $("#con").children().click(function(){
+			// 	$(this).addClass("bg").siblings().removeClass()
+			// 	var f=$(this).attr("data-index")
+			// 	$("#cn").children().eq(f).show().siblings().hide()
+			// })
+		})
+		
+	</script>
+</head>
+<body>
+    <ul id="con">
+        <li class="bg" data-index="0">格式</li>
+        <li data-index="1">微分</li>
+        <li data-index="2">二个</li>
+    </ul>
+    <div id="cn">
+        <p class="show">wafsrsg</p>
+        <p>efaeaf</p>
+        <p>fasreg</p>
+    </div>
+</body>
+</html>

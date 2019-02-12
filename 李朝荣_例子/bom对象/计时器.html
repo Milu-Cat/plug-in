@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>计时器</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <button id="ks">开始</button>
+    <button id="tz">停止</button>
+    <button id="cz">重置</button>
+    <div id="aa">00:00:00</div>
+</body>
+    <script>
+        var h=0;
+        var m=0;
+        var s=0;
+        var hh=00;
+        var mm=00;
+        var ss=00;
+        var f=0;
+        document.getElementById("ks").onclick=function ks(){
+            if(f==0){
+                i=setInterval("js()",1000);
+            }
+            f=1; 
+        }
+        function js(){
+            s>9?ss=s:ss="0"+s;
+            m>9?mm=m:mm="0"+m;
+            h>9?hh=h:hh="0"+h;
+            s+=1;
+            if(s>=60){
+                s=0;
+                m+=1;
+            }
+            if(m>=60){
+                m=0;
+                h+=1;
+            }
+            document.getElementById("aa").innerHTML=hh+":"+mm+":"+ss
+        }
+        document.getElementById("tz").onclick=function(){
+            clearInterval(i);
+            f=0;
+        }
+        document.getElementById("cz").onclick=function(){
+            clearInterval(i);
+            f=0;
+            s=h=m=0;
+            document.getElementById("aa").innerHTML="00:00:00"
+        }
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{margin:0;padding:0;}
+		#banner,#show{
+			width:1903px;
+			height: 300px;
+			overflow: hidden;         
+		}
+		#box{
+			width: 5709px;
+			height: 300px;
+		}
+		#box img{
+                   width:1903px;
+				   height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<div id="show">
+			<div id="box">
+				<img src="img/0.jpg"><img src="img/1.jpg"><img src="img/2.jpg">
+			</div>		
+		</div>
+	</div>
+</body>
+    <script> 
+	var i;       //先全局声明一下变量，否则鼠标直接滑入再离开，浏览器会直接执行              document.getElementById("banner").onmouseout=function()，因为找不到i变量。
+	var f;
+	var m;
+       function ss(){
+		   var x=document.getElementById("show");
+		   x.scrollLeft+=10;
+		   if(x.scrollLeft>=1903){
+			   document.getElementById("box").appendChild(document.getElementById("box").children[0]);
+			   x.scrollLeft=0;
+			   clearInterval(i);
+			   f=setTimeout(function(){i=setInterval(ss,18)},2000);     //第二张迟缓两秒播放
+		   }
+	   }
+	  m=setTimeout(function(){i=setInterval(ss,18)},2000)               //第一张迟缓两秒播放
+	   document.getElementById("banner").onmouseover=function(){
+		   clearInterval(i);
+		   clearTimeout(f);
+		   clearTimeout(m);
+	   }
+	   document.getElementById("banner").onmouseout=function(){
+		i=setInterval("ss()",18);
+	   }
+	</script>
+</html>

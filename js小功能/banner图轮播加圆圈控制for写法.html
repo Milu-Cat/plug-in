@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <mate charset="utf-8">
+    <!-- <link rel="stylesheet" href="css/lcr.css"> -->
+  <style type="text/css">
+   .yuan{
+               width:15px;
+               height:15px;
+               background: #fff;
+               border-radius:50%; 
+               float: left;
+               margin-left:10px;          
+   }
+   .yuanbox{
+               position: absolute;
+               margin-top:-35px;
+               margin-left:1700px;
+   }
+   .yuan_{
+         width:15px;
+               height:15px;
+               background: #ccc;
+               border-radius:50%; 
+               float: left;
+               margin-left:10px; 
+   }
+   #one{
+                cursor: pointer;
+   }
+  </style>
+</head>
+<body>
+        <div id="one">
+            <div id="banner"><img src="img/0.jpg"></div>
+            <div class="yuanbox">
+                <div class="yuan_" id="yuan0" data-index="0"></div><div class="yuan" id="yuan1"  data-index="1"></div><div class="yuan" id="yuan2"  data-index="2"></div>
+            </div>
+        </div>
+</body>
+   <script>
+       var a=document.getElementById("yuan0");
+       var b=document.getElementById("yuan1");
+       var c=document.getElementById("yuan2");
+       var x=document.getElementById("banner").children;
+       var str=[a,b,c];
+       var n=1;
+       function ss(){
+            if(n>2){
+                n=0;
+            }
+            document.getElementById("yuan"+n).className="yuan_"  
+            document.getElementById("yuan"+n).previousSibling.className="yuan" 
+            document.getElementById("yuan"+n).nextSibling.className="yuan" 
+            if(n==0){
+            document.getElementById("yuan2").className="yuan"
+            }
+           
+            x[0].src="img/"+n+".jpg";
+            n++;
+       }
+       j=setInterval("ss()" ,1500);
+
+     document.getElementById("one").onmouseover=function(){
+         clearInterval(j)
+     }
+     document.getElementById("one").onmouseout=function(){
+        j=setInterval("ss()" ,1500);
+ 
+     }
+     var z=document.getElementsByClassName("yuanbox")[0].children;
+  
+     for(var i=0;i<z.length;i++){
+         z[i].onmouseenter=function(){
+             var v=parseInt(this.getAttribute("data-index"));
+               var k=this.parentNode.previousElementSibling.children[0];
+               k.src="img/"+v+".jpg";
+               var g=this.parentNode.children;
+               for(var i=0;i<g.length;i++){
+                   g[i].className="yuan"
+               }
+               this.className="yuan_"
+         }
+     }
+    </script>
+</html>

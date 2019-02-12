@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table标签页for写法</title>
+	<style type="text/css">
+	 #nav{width: 300px;list-style-type:none}
+      #nav li{
+         float: left;
+         width: 98px;
+         height: 30px;
+         text-align: center;
+         line-height:30px;
+         margin-right:2px;
+      }
+      div{
+        width: 500px;
+        height: 300px;
+        border:1px solid #000;
+        clear:left;
+
+      }
+      .show{display:block;}
+
+      .hide{display:none}
+      .active{
+         background:#0ff;
+      }
+
+
+
+	</style>
+</head>
+<body>
+<ul id="nav">
+	<li class="active" data-index="0">体育</li>
+	<li data-index="1">化学</li>
+	<li data-index="2">数学</li>
+</ul>
+
+<div id="con">
+<div class="show">1</div>
+<div class="hide">2</div>
+<div class="hide">3</div>
+</div>	
+</body>
+<script type="text/javascript">
+	var ll=document.getElementById("nav").children;
+	for(i=0;i<ll.length;i++){
+        ll[i].onclick=function(){
+          for(j=0;j<ll.length;j++){
+             ll[j].removeAttribute("class");
+          }
+           this.className="active";
+           var f=parseInt(this.getAttribute("data-index"));
+           var con=document.getElementById("con").children;
+           for(j=0;j<con.length;j++){
+               con[j].className="hide";
+           }
+            con[f].className="show" ; 
+        }
+	}
+</script>
+</html>

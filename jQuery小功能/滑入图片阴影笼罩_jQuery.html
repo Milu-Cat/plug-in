@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <style>
+        .con{
+              width:300px;
+              height: 300px;
+              position: relative;
+        }
+        .con img{
+              width:300px;
+              height: 300px;
+        }
+        .one{
+              width:300px;
+              height: 300px;
+              position: absolute;
+              background: #000;
+              opacity: 0.5;
+             left: 0;
+              bottom: 0;
+              /* 把bottom换成top阴影就会从上往下拉下 */
+              display: none;
+        }
+	</style>
+      <script src="jquery.js"></script>
+      <script src="插件/滑入图片阴影笼罩.js"></script>
+	<script>
+		$(function(){
+                  $(".con").yinying()
+            //  $(".con").hover(function(){
+            //        $(".one").stop(false,true).slideDown(200)
+            //  },function(){
+            //        $(".one").stop().slideUp(200)
+            //  })
+		})
+		
+	</script>
+</head>
+<body>
+   <div class="con">
+       <img src="img/1.jpg">
+        <div class="one"></div>
+   </div>
+  
+</body>
+</html>
